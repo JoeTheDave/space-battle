@@ -1,44 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> ## Ship systems and Energy Allocation
+>
+> - Repairs - repairs damage to the ship.
+> - Shields - charges shields to deflect weapons fire and colisions with other ships.
+> - Weapons - charges weapons so your ship can fire.
+> - Thrusters - powers thrusters which accelerate the ship. A ship will maintain momentum even if thrusters are deactivated.
+> - Sensors - powers ship sensors to scan for enemy ships and weapons fire.
+>
+> All systems require energy to function and function more optimally at higher energy levels
+>
+> Each ship has capacity to power one system at 100% capacity, but can divide that erergy among all systems. For instance, all systems can operate simultaneously at 20% capacity.
+>
+> It takes time to tranfer energy between systems. Energy will flow into and out of systems at the rate of 10% per second. If multiple systems are ramping up or down at the same time, that bandwidth is divided between systems.
+>
+> If 100% of energy is not being used, the leftover energy is automatically diverted to the ships energy reserves.
+>
+> If all systems are powered down and 100% of energy is diverted to reserves, reserves will fill to maximum in 10 seconds.
+>
+> It is possible to operate systems such that more than 100% of ship energy capacity is being used. Any energy beyond 100% will draw energy from the ship's energy reserves. If a ship's systems are running at 200% energy capacity, it will take 10 seconds to completely drain a full energy reserve.
+>
+> If ship's systems run above 100% capacity and energy reserves are depleted, the ship will begin lose structural integrity at the same rate of loss as the energy reserves.
+>
+> It is possible to run all ship systems at 100% capacity, but the ship will drain energy reserves and lose structural integrity very quickly.
+>
+> Once a ship reaches 0% structural integrity, the ship is destroyed.
